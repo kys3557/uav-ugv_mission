@@ -108,7 +108,10 @@ UAV는 'uav.launch.py' 파일을 통해 실행되며, 런치 시 'mode' 인자�
 ----
 
 
-https://github.com/user-attachments/assets/c5a10338-0ef8-4193-b9ce-1f692e5c6710
+
+https://github.com/user-attachments/assets/3a64362f-4599-4f32-9e56-45601fbf5ad1
+
+
 
 
 
