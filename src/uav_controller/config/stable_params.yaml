@@ -1,0 +1,43 @@
+uav_controller:
+  ros__parameters:
+  
+    # 이륙 목표 고도 (미터)
+    # TakeOff 단계에서 드론이 이 높이에 도달하면 다음 단계로 전환
+    target_takeoff_altitude: 15.0
+
+    # UGV에 출발 신호를 보낼 이륙 고도 차이 임계값 (미터)
+    # 드론 비행 시작 고도 + 이 값 이상 높아지면 /status/takeoff_complete 퍼블리시
+    ugv_start_altitude_threshold: 12.0
+
+    # 이륙 완료 판정 오차 허용치 (m)
+    takeoff_altitude_tolerance: 0.5
+
+    # 웨이포인트 도착 판정 허용 거리 (미터)
+    # FlyToWaypoint 단계에서 이 값 이내로 들어오면 다음 SearchForMarker로 전환
+    waypoint_arrival_tolerance: 0.5
+
+    # 드론이 정지 상태로 간주되는 속도 임계값 (m/s)
+    # local_position_callback에서 속도가 이 값 이하이면 is_drone_stable_and_stopped_ = true
+    stopped_velocity_threshold: 0.1
+
+    # SET_POSE → SEARCHING 단계 전 자세 안정화 대기 시간 (초)
+    # handleSearchForMarker 와 handleRendezvous의 WAIT_FOR_STABLE에서 사용
+    pose_stable_wait_seconds: 5
+
+    # 마커 검색 단계의 최대 대기 시간 (초)
+    # SearchForMarker 와 Rendezvous TRACK_AND_APPROACH 단계의 타임아웃 기준
+    marker_search_timeout_seconds: 5
+
+    # 랑데부 초기 대기 고도 (미터)
+    # handleRendezvous의 GO_TO_AREA, WAIT_FOR_STABLE 단계에서 호버링 높이로 사용
+    rendezvous_waiting_altitude: 5.0
+
+    # 랑데부 시 착륙 판정 고도 (미터)
+    # WAIT_FOR_STABLE 단계에서 이 고도 이하로 내려가면 LAND 단계로 전환
+    rendezvous_landing_altitude: 1.0
+
+    # 랑데뷰 도착 판정 허용 반경 (m)
+    rendezvous_arrival_tolerance: 1.0
+
+    # 한 번에 내려갈 거리 (m)
+    rendezvous_descent_distance: 1.2
