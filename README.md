@@ -7,12 +7,15 @@
 ⚖️ **평가 방식**: 정확한 좌표 저장(오차 1m 이하) / 충돌 횟수 / 정밀 착륙 정확도 / 랑데뷰 착륙 랩 타임 측정(UGV 출발 시점 ~ UAV disarm 명령 시점)  
    ※ 8개의 팀중에 가장 빨리 들어오는 팀이 우승한다  
    
-<img width="572" height="678" alt="sky_view" src="https://github.com/user-attachments/assets/61efb394-dac1-42cc-9a54-75fd3b018848" />   
+<img width="979" height="549" alt="Competition Area" src="https://github.com/user-attachments/assets/905f8a3a-d6c0-44af-aacf-3bc6f496ceb6" />
+[Sky View]
+<br><br>
+<img width="530" height="467" alt="Start Point" src="https://github.com/user-attachments/assets/c8d9b12a-115a-41ea-bb07-baeb3cf344be" />  
 
-
+[Start Point]
 <br><br>
 **✍ 시나리오 순서도**  
-1. UGV가 UAV를 탑재한 채로 출발하여 구조 현장으로 이동  
+1. UGV가 UAV를 탑재한 채로 안정적으로 운반하여 구조 현장으로 이동  
 2. 특정 위치에서 UAV는 자동 이륙하고 UGV는 장애물을 피하며 랑데뷰 포인트로 이동  
 3. UAV는 폐허 지대 내 정해진 waypoint를 방문하며 구조자(0번~9번 ArUco 마커)를 탐색  
 4. 마커를 발견하면 위치 및 ID를 csv에 저장  
@@ -57,6 +60,11 @@
 7. **Completed (미션 완료)**  
    - 착륙 후 'Disarm' 명령 발행  
    - 전체 미션 소요 시간 로그 출력 및 종료
+
+<img src="https://github.com/user-attachments/assets/ee56b8d0-0f0c-402f-ba21-b1a9c7ab5d62" alt="RDV Point" width="600" height="500"/>  
+
+[Rendezvous Point]
+
 ----
 
 **✅ UAV 최적화 실험**  
@@ -106,7 +114,7 @@ UAV는 'uav.launch.py' 파일을 통해 실행되며, 런치 시 'mode' 인자�
 실험 반복이나 랩타임 튜닝 과정에서 빠르게 수치 수정 및 테스트가 가능
 
 ----
-**시험 당일 영상**
+**Competition**
 
 
 https://github.com/user-attachments/assets/3a64362f-4599-4f32-9e56-45601fbf5ad1
